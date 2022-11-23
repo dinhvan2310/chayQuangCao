@@ -806,9 +806,8 @@ p {
     top: 0;
     left: 80%; 
     opacity: 0;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite, header_hero_shape 1s ease-in-out forwards 2s;
+    background-color: #4bc0af;
+    animation: header_hero_shape 1s ease-in-out forwards 2s;
   }
     @keyframes header_hero_shape {
       to {
@@ -816,17 +815,7 @@ p {
         opacity: 1;
       }
     }
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
+
 
 .header_hero_content .header_sub_title {
   opacity: 0;
@@ -940,7 +929,13 @@ img[alt="hero"] {
     @media only screen and (min-width: 576px) and (max-width: 767px) {
       .about_image .about_shape {
         width: 404px;
-        height: 525px; } }
+        height: 525px; } 
+      }
+    @media (max-width: 567px) {
+      .about_image_box {
+        display: none;
+      }
+    }
     .about_image .about_shape::before {
       position: absolute;
       content: '';
